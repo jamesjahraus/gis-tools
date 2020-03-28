@@ -1,3 +1,9 @@
+# gis data
+*.csv
+
+# vscode
+.vscode
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
