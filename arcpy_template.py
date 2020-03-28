@@ -51,7 +51,7 @@ def ls_fc():
 
 
 def output_name(input_name, suffix):
-    output_name = '{0}_{1}'.format(input_name, suffix)
+    output_name = '{0}{1}'.format(input_name, suffix)
     logger.info('output_name: {0}'.format(output_name))
     return output_name
 
@@ -64,7 +64,7 @@ def set_path(wd, data_path):
 
 def import_spatial_reference(dataset):
     spatial_reference = arcpy.Describe(dataset).SpatialReference
-    logger.info('spatial_reference: {0}'.format(spatial_reference))
+    logger.info('spatial_reference: {0}'.format(spatial_reference.name))
     return spatial_reference
 
 
@@ -81,7 +81,7 @@ def setup_env(workspace_path, spatial_ref_dataset):
     arcpy.env.outputCoordinateSystem = import_spatial_reference(
         spatial_ref_dataset)
     logger.info('outputCoordinateSystem: {}'.format(
-        arcpy.env.outputCoordinateSystem))
+        arcpy.env.outputCoordinateSystem.name))
 
 
 def check_status(result):
