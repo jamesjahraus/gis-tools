@@ -12,7 +12,6 @@ import os
 import sys
 import time
 import logging
-
 # import fire # Uncomment to make this a CLI program.
 
 logger = logging.getLogger(__name__)
