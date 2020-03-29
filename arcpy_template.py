@@ -12,7 +12,8 @@ import os
 import sys
 import time
 import logging
-import fire
+
+# import fire # Uncomment to make this a CLI program.
 
 logger = logging.getLogger(__name__)
 
@@ -130,5 +131,6 @@ def run_model(spatial_ref_dataset, ll='INFO'):
 # python-fire requires: sys.stdin must be a terminal input stream
 # jupyter sys.stdin.isatty(), is a terminal, is False or None depending on implementation
 # must comment out fire.Fire() when running in jupyter environment
-if __name__ == '__main__':
-    fire.Fire()
+# Uncomment to make this a CLI program.
+# if __name__ == '__main__':
+#     fire.Fire()

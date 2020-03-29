@@ -1,6 +1,9 @@
 # gis data
 *.csv
 
+# pycharm
+.idea
+
 # vscode
 .vscode
 
