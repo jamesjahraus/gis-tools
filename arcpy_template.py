@@ -28,6 +28,7 @@ def setup_logging(level='INFO'):
     """
     ll = logging.getLevelName(level)
     logger = logging.getLogger()
+    logger.handlers.clear()
     handler = logging.StreamHandler()
     formatter = logging.Formatter(
         "%(asctime)s %(name)-12s %(levelname)-8s"
